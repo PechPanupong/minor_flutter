@@ -49,12 +49,27 @@ class ItemCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.favorite_outline)),
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.shopping_cart_outlined))
+                          Expanded(
+                              child: GestureDetector(
+                                  child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 2),
+                            height: 30,
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 0.5),
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.white),
+                            child: Icon(Icons.favorite_outline),
+                          ))),
+                          Expanded(
+                              child: GestureDetector(
+                                  child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 2),
+                            height: 30,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.greenAccent),
+                            child: Icon(Icons.shopping_cart_outlined),
+                          ))),
                         ],
                       )
                     ]),

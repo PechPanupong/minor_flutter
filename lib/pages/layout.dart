@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minor_flutter/pages/categories/categories_view.dart';
 import 'package:minor_flutter/pages/payment/payment_view.dart';
+import 'package:minor_flutter/pages/user/user_view.dart';
 
 class LayoutApp extends StatefulWidget {
   const LayoutApp({super.key});
@@ -11,7 +12,11 @@ class LayoutApp extends StatefulWidget {
 
 class _LayoutAppState extends State<LayoutApp> {
   int _selectedIndex = 0;
-  final List<Widget> _widgets = [const CategoriesView(), const PaymentView()];
+  final List<Widget> _widgets = [
+    const CategoriesView(),
+    const PaymentView(),
+    const UserView()
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -31,6 +36,10 @@ class _LayoutAppState extends State<LayoutApp> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_outlined),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_outlined),
             label: '',
           ),
         ],
